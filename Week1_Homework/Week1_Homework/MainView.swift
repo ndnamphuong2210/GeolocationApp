@@ -142,7 +142,7 @@ struct MainView: View {
                             .background(Color.white, in: RoundedRectangle(cornerRadius: 8))
                             .foregroundStyle(Color.black)
                         Text("Prime \n \(res4)")
-                            .font(Font.custom("Georgia", size: 20))
+                            .font(Font.custom("Georgia", size: 18))
                             .multilineTextAlignment(.center)
                             .frame(maxWidth: .infinity)
                             .padding(13)
