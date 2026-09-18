@@ -67,11 +67,16 @@ struct MainView: View {
                             Button("n!") {
                                 
                                 if let nn = Int(n){
-                                    var ress = 1
-                                    for i in 1...nn{
-                                        ress=ress*i
-                                        res3 = "\(ress)"
+                                    if nn<=20 && nn>0{
+                                        var ress = 1
+                                        for i in 1...nn{
+                                            ress=ress*i
+                                            res3 = "\(ress)"
+                                        }
+                                    } else{
+                                        res3 = "crash"
                                     }
+                                    
                                 }
                                 else {
                                     res3 = "Please enter sth"
