@@ -1,14 +1,14 @@
 //
-//  Week1App.swift
-//  Week1
+//  Week2AApp.swift
+//  Week2A
 //
-//  Created by MAY 03 on 14/9/26.
+//  Created by MAY 03 on 21/9/26.
 //
 
 import SwiftUI
 
 @main
-struct Week1App: App {
+struct Week2AApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
