@@ -6,3 +6,11 @@
 //
 
 import Foundation
+
+enum OrderStatus: String, CaseIterable {
+    case pending = "Chờ"
+    case prepareing = "Chuẩn bị"
+    case shipping = "Đang giao"
+    case delivered = "Đã giao"
+    case cancelled = "Hủy"
+}
