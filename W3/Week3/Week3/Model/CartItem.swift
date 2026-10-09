@@ -3,17 +3,17 @@
 //  Week3
 //
 //  Created by MAY 03 on 5/10/26.
-//
+//Nam phuong
 
 import Foundation
 
 struct CartItem: Identifiable {
     let id: UUID = UUID()
     let product: Product
-    let quantity: Int
+    var quantity: Int
 }
 
-let cartItems1: [CartItem] = [
+var cartItems1: [CartItem] = [
     CartItem(product: products[0], quantity: 2),
     CartItem(product: products[1], quantity: 1),
     CartItem(product: products[2], quantity: 3),
@@ -25,3 +25,11 @@ let cartItems1: [CartItem] = [
     CartItem(product: products[8], quantity: 1),
     CartItem(product: products[9], quantity: 1)
 ]
+
+func add(product: Product){
+    if let i=cartItems1.firstIndex(where: { $0.product.id == product.id }){
+        cartItems1[i].quantity += 1
+    } else{
+        cartItems1.append(CartItem(product: product, quantity: 1))
+    }
+}

@@ -3,13 +3,14 @@
 //  Week3
 //
 //  Created by MAY 03 on 5/10/26.
-//
+//Nam Phuong
 
 import SwiftUI
 
 struct HomeHeaderView: View {
     var storename: String = "ngon ká"
     var slogan: String = "một tay nhiều ká"
+    @State private var showCart = false
     
     var body: some View {
 
@@ -44,7 +45,7 @@ struct HomeHeaderView: View {
                     
                 }
             }.offset(x: 20)
-            Button{} label:{
+            Button{showCart = true} label:{
                 ZStack{
                     Image(systemName: "cart")
                         .font(.custom("Georgia", size: 30))
@@ -63,7 +64,9 @@ struct HomeHeaderView: View {
         .background(
                     RoundedRectangle(cornerRadius: 20)
                         .fill(Color.pink.opacity(0.04))
-        )
+        ).navigationDestination(isPresented: $showCart) {
+            CartView()
+        }
     }
 }
 

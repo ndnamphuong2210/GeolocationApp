@@ -9,22 +9,13 @@ import SwiftUI
 
 struct BannerView: View {
     var body: some View {
-        ZStack(alignment: .center) { // 1. ZStack căn giữa tuyệt đối
-            // Hình nền "bn"
+        ZStack(alignment: .center) { 
             Image("bn")
                 .resizable()
                 .scaledToFill()
             
-            // Gradient: Làm tối đều xung quanh để chữ nổi bật hơn
-            //LinearGradient(
-                //colors: [Color.black.opacity(0.2), Color.clear],
-                //startPoint: .center,
-                //endPoint: .bottom // Gradient tỏa nhẹ xuống dưới
-            //)
-            
-            // 2. Nội dung chính
-            HStack(alignment: .center, spacing: 20) { // 3. HStack căn giữa
-                // 4. Khối chữ căn giữa
+
+            HStack(alignment: .center, spacing: 20) {
                 VStack(alignment: .center, spacing: 6) {
                     Text("ƯU ĐÃI THÁNG NÀY")
                         .font(.custom("Georgia-Bold", size: 11))
