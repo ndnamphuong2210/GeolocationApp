@@ -3,20 +3,24 @@
 //  Week3
 //
 //  Created by MAY 03 on 5/10/26.
-//Ngoc Mai
+//  Ngoc Mai
 
 import SwiftUI
 
 struct ContentView: View {
+    // Biến lưu trữ từ khóa tìm kiếm
+    @State private var searchText = ""
+
     var body: some View {
         NavigationStack {
-            ZStack {
+            ZStack(alignment: .bottom) {
                 Color.pink.opacity(0.025)
                     .ignoresSafeArea()
                 
                 ScrollView {
                     VStack(spacing: 16) {
                         HomeHeaderView()
+                        
                         NavigationLink(destination: MapView()) {
                             HStack(spacing: 8) {
                                 Image(systemName: "mappin.circle.fill")
@@ -38,11 +42,17 @@ struct ContentView: View {
                             .cornerRadius(10)
                             .padding(.horizontal)
                         }
-                        SearchBarView()
-                        BannerView()
-                        CategoryRowView()
-                        ProductCardView()
-                        // ... các view khác
+                        
+                        SearchBarView(searchText: $searchText)
+                        
+                        if searchText.isEmpty {
+                            BannerView()
+                            CategoryRowView()
+                        }
+                        
+                        ProductCardView(searchText: searchText)
+                        
+                        Spacer(minLength: 70)
                     }
                 }
             }

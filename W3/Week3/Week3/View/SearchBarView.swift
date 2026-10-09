@@ -8,17 +8,27 @@
 import SwiftUI
 
 struct SearchBarView: View {
-    @State private var searchText = ""
+    @Binding var searchText: String
 
     var body: some View {
         HStack(spacing: 12) {
             HStack(spacing: 8) {
                 Image(systemName: "magnifyingglass")
                     .foregroundColor(.black)
-                TextField("", text: $searchText, prompt: Text("Tìm cá, cây thủy sinh, phụ kiện...").foregroundColor(.black.opacity(1)))
+                
+                TextField("", text: $searchText, prompt: Text("Tìm cá, cây thủy sinh, phụ kiện...").foregroundColor(.black.opacity(0.6)))
                     .font(.custom("Georgia", size: 13))
                     .foregroundColor(.black)
                     .accentColor(.black)
+                
+                if !searchText.isEmpty {
+                    Button(action: {
+                        searchText = ""
+                    }) {
+                        Image(systemName: "xmark.circle.fill")
+                            .foregroundColor(.gray)
+                    }
+                }
             }
             .padding(10)
             .background(Color.pink.opacity(0.05))
@@ -37,5 +47,5 @@ struct SearchBarView: View {
 }
 
 #Preview {
-    SearchBarView()
+    SearchBarView(searchText: .constant(""))
 }

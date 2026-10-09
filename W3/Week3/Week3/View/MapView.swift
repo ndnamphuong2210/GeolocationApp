@@ -3,15 +3,13 @@
 //  Week3
 //
 //  Created by MAY 03 on 5/10/26.
-//
+//Ngọc Mai
 
 import SwiftUI
 import MapKit
 
 struct MapView: View {
-    // Tọa độ cửa hàng (Quận 1, TP.HCM)
     private let storeCoordinate = CLLocationCoordinate2D(latitude: 10.7769, longitude: 106.7009)
-    // Tọa độ điểm giao hàng gần đó (Quận 3, TP.HCM)
     private let deliveryCoordinate = CLLocationCoordinate2D(latitude: 10.7872, longitude: 106.6918)
 
     @State private var region = MKCoordinateRegion(
@@ -30,7 +28,6 @@ struct MapView: View {
                     calculateRoute()
                 }
 
-            // Bảng thông tin cửa hàng & khoảng cách
             VStack(alignment: .leading, spacing: 6) {
                 Text("Ngon Ká - Cửa hàng chính")
                     .font(.custom("Georgia-Bold", size: 16))
@@ -72,7 +69,6 @@ struct MapView: View {
         }
     }
 
-    // Hàm tính toán quãng đường và vẽ tuyến đường
     func calculateRoute() {
         let request = MKDirections.Request()
         request.source = MKMapItem(placemark: MKPlacemark(coordinate: storeCoordinate))
@@ -90,7 +86,6 @@ struct MapView: View {
     }
 }
 
-// Helper kết nối MapKit UIKit (MKMapView) để vẽ polyline đường đi
 struct MapWithRoute: UIViewRepresentable {
     let store: CLLocationCoordinate2D
     let destination: CLLocationCoordinate2D
@@ -100,7 +95,6 @@ struct MapWithRoute: UIViewRepresentable {
         let mapView = MKMapView()
         mapView.delegate = context.coordinator
         
-        // Thêm pin cửa hàng
         let storeAnno = MKPointAnnotation()
         storeAnno.coordinate = store
         storeAnno.title = "Ngon Ká"
