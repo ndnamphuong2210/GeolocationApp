@@ -1,0 +1,14 @@
+1, Cá, 1, 150000, 1, Cá khỏe mạnh, màu sắc rực rỡ, 20
+2, Rêu, 2, 45000, 2, Rêu phát triển tốt, dễ chăm sóc, 35
+3, Vợt, 3, 25000, 3, Lưới siêu mịn không làm trầy vảy, 50
+4, Bể Cá 40cm, 4, 320000, 4, Kính siêu trong, góc đúc thẩm mỹ, 10
+5, Lọc, 5, 85000, 5, Lọc siêu êm, tích hợp lọc váng, 15
+6, Hikari Fancy Guppy, 6, 60000, 6, Giúp cá lên màu đẹp, hạt nổi, 40
+7, Bio-Knock 2, 7, 30000, 7, Đặc trị nấm trắng và túm vây, 25
+8, Tép Đỏ, 8, 25000, 8, Tép đỏ hạng cao, vỏ dày, 100
+9, Combo Bể Cá Mini, 9, 199000, 9, Trọn bộ gồm bể, đèn LED và máy lọc, 8
+10, Gói Dịch Vụ Thiết Kế Bể Thủy Sinh, 10, 500000, 10, Tư vấn setup trọn gói tại nhà, 5
+11, Cá chết, 1, 0, ca1, Nổi ngửa bụng, 0
+12, Cá nóc, 1, 95000, ca2, Biết phồng tròn siêu đáng yêu, chuyên diệt ốc hại, 12
+13, Cá quỷ, 1, 350000, ca3, Ngầu, ngụy trang đỉnh cao, 3
+14, Cá mặp, 1, 120000, ca4, Bơi lội dũng mãnh, tạo điểm nhấn cá tính cho bể, 6
